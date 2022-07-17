@@ -1,7 +1,7 @@
-<div class="stock-container">
+<div class="stock-container" *ngFor="let stock of stocks; index as i">
     <div class="name">{{stock.name + ' (' + stock.code + ')'}}</div>
     <div class="price"
-    [class]="isPositiveChange() ? 'positive' : 'negative'">$ {{stock.price}}</div>
-    <button (click)="toggleFavorite()"
-            [disabled]="stock.favorite">Add to Favorite</button>
+    [ngClass]="stockClasses">$ {{stock.price}}</div>
+    <button (click)="toggleFavorite(i)"
+            [disabled] ="stock.favorite">Add to Favorite</button>
 </div>
