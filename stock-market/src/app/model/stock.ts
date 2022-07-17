@@ -3,5 +3,6 @@ export interface Stock{
     name: string,
     code: string,
     price: number,
-    previousPrice: number
+    previousPrice: number,
+    exchange: string
 }

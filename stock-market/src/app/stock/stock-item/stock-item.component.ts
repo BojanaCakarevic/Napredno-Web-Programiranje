@@ -14,7 +14,7 @@ export class StockItemComponent implements OnInit {
   public stock2!: Stock;
   public stockClasses;
 
-  public stocks!: Array<Stock>
+  public stocks!: Array<Stock>;
 
   constructor() {
     this.stock = {
@@ -22,21 +22,24 @@ export class StockItemComponent implements OnInit {
       code: "TSC",
       price: 180,
       previousPrice: 285,
-      favorite: false
+      favorite: false,
+      exchange: "Bla"
     }
     this.stock1 = {
       name: "Second Stock Company",
       code: "SSC",
       price: 18,
       previousPrice: 5,
-      favorite: false
+      favorite: false,
+      exchange: "Bla"
     }
     this.stock2 = {
       name: "Last Stock Company",
       code: "LSC",
       price: 80,
       previousPrice: 285,
-      favorite: false
+      favorite: false,
+      exchange: "Bla"
     }
 
     this.stocks = [];
