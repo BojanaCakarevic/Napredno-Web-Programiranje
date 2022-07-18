@@ -1,0 +1,14 @@
+<div class="product-item" [ngClass] = "productClasses">
+    <div class="image">
+        <img [src]="product.imageURL">
+    </div>
+    <div class="datails">
+        <div>{{product.name}}</div>
+        <div>{{product.price}} EUR</div>
+        <div>
+            <button (click) = "quantityMinus()" [disabled] = "product.quantity == 0"> - </button>
+            {{product.quantity}}
+            <button (click) = "quantityPlus()"> + </button>
+        </div>
+    </div>
+</div>
