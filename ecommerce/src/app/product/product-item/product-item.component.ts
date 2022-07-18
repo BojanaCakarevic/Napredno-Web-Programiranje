@@ -11,6 +11,7 @@ export class ProductItemComponent implements OnInit {
   public product: Product;
  // public products: Array<Product>;
   public productClasses;
+  public quantities: Array<Number>;
 
   constructor() { 
     this.product = {
@@ -24,6 +25,11 @@ export class ProductItemComponent implements OnInit {
       "green": this.product.onSale,
       "red": !this.product.onSale
     };
+
+    this.quantities = [];
+    for (let i = 0; i < 20; i++) {
+      this.quantities.push(i);
+    };
   }
 
   quantityMinus() {
@@ -35,6 +41,10 @@ export class ProductItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  setQuantity(numb: number) {
+    this.product.quantity == numb;
   }
 
 }
